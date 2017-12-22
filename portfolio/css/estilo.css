@@ -1,7 +1,16 @@
 body{
 	font-family: 'Roboto', sans-serif;
+	color: #333;
 }
 
+a:link, a:active, a:visited{
+	color: #315e8a;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
 /* grid 960px/12 colunas = 80px => padrão mais usado
 		mas precisa de um espaço entre cada coluna, então
 		vamos utilizar 60px
@@ -65,4 +74,147 @@ body{
 
 .col12{
 	width: 940px; /* os 20 restantes são do padding dir e esq.*/
+}
+
+/* Estilos reutilizáveis */
+.sem-padding{
+	padding: 0 !important; /* Important: força a utilização de padding 0, no caso, mesmo que outros valores sejam
+							definidos para o mesmo em outro momento*/
+}
+
+.sem-margin{
+	margin: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: 500; /* Peso da fonte: quanto maior o peso, mais "negritada" 
+						a fonte será. (observar o link da fonte escolhida no index).*/
+	margin: 15px 0 10px 0;
+}
+
+ul li, ol li{
+	margin-bottom: 7px;
+}
+
+ul.inline li, ol.inline li{
+	display: inline;
+	margin-right: 15px;
+}
+
+ul.inline li:last-child, ol.inline li:last-child{ /* O último elemento da lista não precisa de margem à direita
+												pois pode acabar excedendo o limite de pixels da largura.*/
+	margin-right: 0;
+}
+
+ul.sem-marcador, ol.sem-marcador{
+	list-style: none;
+}
+
+a.botao, input.botao{
+	background: #1f3c58;
+	color: #ebebeb;
+	border-radius: 3px;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin: 5px 0; 
+	display: inline-block;
+	border: none;
+}
+
+a.botao:hover, input.botao:hover{
+	background: #315e8a;
+	text-decoration: none;
+}
+
+img{
+	max-width: 100%; /*100% da div onde a img está inserida */
+	max-height: auto;
+}
+/* layout do site */
+.header{
+	background: #dee3e6;
+}
+
+h1.logo{
+	font-weight: 300;
+	color: #315e8a;
+	letter-spacing: -2px;
+}
+
+.conteudo-extra{
+	background: #f1f2ea;
+}
+
+.footer{
+	background: #1f3c58;
+	color: #ebebeb;
+	padding: 20px 0;
+	text-align: center;
+	font-weight: 100;
+}
+
+.menu{
+	text-transform: uppercase;
+	text-align: right;
+	margin-top: 25px;
+}
+
+.menu li a{
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+
+.menu li a:hover{
+	text-decoration: none;
+	background: #1f3c58;
+	color: #ebebeb;
+}
+
+ul.noticias li{
+	clear: both;
+	display: block;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+ul.noticias li img{
+	width: 70px;
+	height: auto;
+	margin-right: 10px;
+	float: left;
+}
+
+ul.noticias li h4{
+	margin: -2px 0 5px 0;
+	font-weight: 500;
+}
+
+ul.noticias li p{
+	margin: 5px 0;
+	font-weight: 300;
+}
+
+ul.noticias li p a{
+	font-weight: 500;
+}
+
+.contato label{
+	display: block;
+	font-size: 13px;
+	font-weight: 300;
+}
+
+.contato input, .contato textarea{
+	display: block;
+	margin-bottom: 15px;
+	padding: 5px 2%;
+	width: 96%;
+}
+
+.contato textarea{
+	height: 150px;
+}
+
+.contato input.botao{
+	width: auto;
 }
