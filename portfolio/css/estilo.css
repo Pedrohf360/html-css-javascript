@@ -1,0 +1,67 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+/* grid 960px/12 colunas = 80px => padrão mais usado
+		mas precisa de um espaço entre cada coluna, então
+		vamos utilizar 60px*/
+
+.linha{
+	width: 960px;
+	margin: 0 auto;
+	overflow: auto;
+	padding: 5px 0;
+}
+
+.coluna{
+	padding: 0 10px; /* 10px de espaço entre as colunas. */
+	float: left;
+}
+
+.col1{
+	width: 60px;
+}
+
+.col2{
+	width: 140px;
+}
+
+.col3{
+	width: 220px;
+}
+
+.col4{
+	width: 300px;
+}
+
+.col5{
+	width: 380px;
+}
+
+.col6{
+	width: 460px;
+}
+
+.col7{
+	width: 540px;
+}
+
+.col8{
+	width: 620px;
+}
+
+.col9{
+	width: 700px;
+}
+
+.col10{
+	width: 780px;
+}
+
+.col11{
+	width: 860px;
+}
+
+.col12{
+	width: 940px; /* os 20 restantes são do padding dir e esq.*/
+}
