@@ -1,0 +1,92 @@
+
+0) ! ou html5:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+4 operadores principais:
+	1) Criando hierarquia: div>ul>li>a
+	<div>
+		<ul>
+			<li></li>
+		</ul>
+	</div>
+
+-----------------------------------------
+	2) div+ul>li
+	<div></div>
+	<ul>
+		<li></li>
+	</ul>
+-----------------------------------------
+	3) div>p>span+em
+	<div>
+		<p><span></span><em></em></p>
+	</div>
+-----------------------------------------
+	4) div>p>span+em^bq
+	<div>
+		<p><span></span><em></em></p>
+		<blockquote></blockquote>
+	</div>
+------------------------------------------
+	5) div>p>ul>li*5
+	<div>
+		<p>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</p>
+	</div>
+----------------------------------------
+	6) div>p>ul>li{texto $}*5
+	<div>
+		<p>
+			<ul>
+				<li>texto 1</li>
+				<li>texto 2</li>
+				<li>texto 3</li>
+				<li>texto 4</li>
+				<li>texto 5</li>
+			</ul>
+		</p>
+	</div>
+---------------------------------------
+	7) div>p>ul>li>a[http://google.com]{Link $}*5
+	<div>
+		<p>
+			<ul>
+				<li>
+					<a href="http://google.com">Link 1</a>
+					<a href="http://google.com">Link 2</a>
+					<a href="http://google.com">Link 3</a>
+					<a href="http://google.com">Link 4</a>
+					<a href="http://google.com">Link 5</a>
+				</li>
+			</ul>
+		</p>
+	</div>
+--------------------------------------
+	8) div.nav-bar.class2#id1>ul#menu>li*5>a
+	<div class="nav-bar class2" id="id1">
+		<ul id="menu">
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
+	</div>
+----------------------------------------
+	9) 
