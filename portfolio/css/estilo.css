@@ -4,7 +4,8 @@ body{
 
 /* grid 960px/12 colunas = 80px => padrão mais usado
 		mas precisa de um espaço entre cada coluna, então
-		vamos utilizar 60px*/
+		vamos utilizar 60px
+*/
 
 .linha{
 	width: 960px;
