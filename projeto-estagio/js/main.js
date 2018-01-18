@@ -1,30 +1,14 @@
-    var txt;
+     $.getJSON('https://raw.githubusercontent.com/Pedrohf360/html-css-javascript/master/projeto-estagio/js/equipamentos.json', function(data){
+    
+        jsonTxt = data;
 
-	function readTextFile(file) {
-        var rawFile = new XMLHttpRequest();
-        rawFile.open("GET", file, false);
-        rawFile.onreadystatechange = function ()
-        {
-            if(rawFile.readyState === 4)
-            {
-                if(rawFile.status === 200 || rawFile.status == 0)
-                {
-                    var allText = rawFile.responseText;
-                    txt = allText;
-                }
-            }
-        }
-        rawFile.send(null);
-    }
+        /*for (var i = 0; i < 1; i++) {
+        alert('ID:' + data[i].ID + '\n' +
+              'Name:' + data[i].Name + '\n' +
+              'Value:' + data[i].Value + '\n');
+              }
+        */
+    });
 
-	readTextFile('js/equipamentos.json');
 
-    var jsonContent = JSON.parse(txt);
 
-    /*
-    for (var i = 0; i < jsonContent.length; i++) {
-        alert('ID:' + jsonContent[i].ID +
-              'Name:' + jsonContent[i].Name +
-              'Value:' + jsonContent[i].Value);
-    }
-    */
