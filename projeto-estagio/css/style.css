@@ -1,9 +1,6 @@
 @charset "UTF-8";
 
-body {
-
-}
-
-h1 {
-  align-content: center;
+.mdl-cell{
+  background-color: #bbb;
+  height: 50px;
 }
