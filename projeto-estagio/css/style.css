@@ -1,6 +1,10 @@
-@charset "UTF-8";
-
 .mdl-cell{
   background-color: #bbb;
   height: 50px;
+}
+
+@media screen and (max-width: 400px) {
+	.esconde-celular{
+	display: none;
+}
 }
