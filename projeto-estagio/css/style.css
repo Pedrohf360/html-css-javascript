@@ -1,10 +1,47 @@
 .mdl-cell{
-  background-color: #bbb;
   height: 50px;
 }
 
 @media screen and (max-width: 400px) {
-	.esconde-celular{
-	display: none;
+	.mdl-navigation.esconde-celular{
+		display: none;
 }
+}
+
+.mdl-cell{
+	padding: 35px 35px;
+	height: 350px;
+}
+
+.mdl-card__title{
+	color: black;
+	text-transform: uppercase;
+	height: 176px;
+	background:  url('../assets/truck_green.png') bottom right 15% no-repeat #46B6AC;
+}
+
+h4.mdl-card__title-text{
+	font-size: 18px;
+	margin: 8px 130px;
+	text-transform: uppercase;
+}
+
+span{
+	padding: 0px 15px;
+}
+
+#progressbar {
+  background-color: black;
+  border-radius: 13px; /* (height of inner div) / 2 + padding */
+  padding: 3px;
+  width: 270px;
+  align-content: center;
+  margin: 5px 0 20px 20px;
+}
+
+#progressbar > div {
+   background-color: lightgreen;
+   width: 100%; /* Adjust with JavaScript */
+   height: 20px;
+   border-radius: 10px;
 }
