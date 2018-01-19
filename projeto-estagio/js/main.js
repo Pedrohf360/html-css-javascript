@@ -1,6 +1,6 @@
-var greenTruck = 'url(\'C:/Users/Home/Documents/GitHub/javascript_learning/projeto-estagio/assets/truck_green.png\') bottom right 15% no-repeat #46B6AC';
-var yellowTruck = 'url(\'C:/Users/Home/Documents/GitHub/javascript_learning/projeto-estagio/assets/truck_yellow.png\') bottom right 15% no-repeat #46B6AC';
-var redTruck = 'url(\'C:/Users/Home/Documents/GitHub/javascript_learning/projeto-estagio/assets/truck_red.png\') bottom right 15% no-repeat #46B6AC';
+var greenTruck = 'url(\'https://github.com/Pedrohf360/html-css-javascript/blob/master/projeto-estagio/assets/truck_green.png?raw=true\') bottom right 15% no-repeat #46B6AC';
+var yellowTruck = 'url(\'https://github.com/Pedrohf360/html-css-javascript/blob/master/projeto-estagio/assets/truck_yellow.png?raw=true\') bottom right 15% no-repeat #46B6AC';
+var redTruck = 'url(\'https://github.com/Pedrohf360/html-css-javascript/blob/master/projeto-estagio/assets/truck_red.png?raw=true\') bottom right 15% no-repeat #46B6AC';
 
 var arr = [];
 
@@ -14,7 +14,7 @@ $(document).ready(function(){
             var fuelValue = '<strong>' + slicedValue + '%' + '</strong>';
 
             truck += '<div class="mdl-cell">' +
-                      '<div class="mdl-card mdl-shadow--2dp demonstracao-card">' +
+                      '<div class="mdl-card mdl-shadow--3dp demonstracao-card">' +
                         '<h4 class="mdl-card__title-text alignCenter">' + 'ID:&nbsp' + value.ID + '</h4>' +
                         '<div class="mdl-card__title">' +
                           '<h2 class="mdl-card__title-text">' + value.Name + '</h2>' +
@@ -22,7 +22,7 @@ $(document).ready(function(){
                         '<h4 class="mdl-card__title-text">Gasolina:&nbsp' + fuelValue + '</h4>' +
                         '<div id="progressbar"> <div></div></div>' +
                         '<div class="mdl-card__actions mdl-card--border">' +
-                          '<button class="mdl-button mdl-js-button mdl-button--primary"><strong>DETALHES</strong></button>' +
+                          '<button class="mdl-button mdl-js-button mdl-button--primary"><a href="./detalhes.html" target=""><strong>VER DETALHES</strong></a></button>' +
                         '</div>' +
                       '</div>' +
                     '</div>';

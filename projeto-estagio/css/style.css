@@ -2,14 +2,26 @@
   height: 50px;
 }
 
+body{
+	background-color: lightgray;
+}
+
+main{
+	text-align: center;
+}
+
 @media screen and (max-width: 400px) {
-	.mdl-navigation.esconde-celular{
+	.esconde-celular{
 		display: none;
 }
 }
 
+a{
+	text-decoration: none;
+}
+
 .mdl-cell{
-	padding: 35px 35px;
+	padding: 35px 10px 0 60px;
 	height: 350px;
 }
 
@@ -17,7 +29,8 @@
 	color: black;
 	text-transform: uppercase;
 	height: 176px;
-	background:  url('../assets/truck_green.png') bottom right 15% no-repeat #46B6AC;
+
+	/*background:  url('../assets/truck_green.png') bottom right 15% no-repeat #46B6AC; => é definido no main.js*/ 
 }
 
 h4.mdl-card__title-text{
