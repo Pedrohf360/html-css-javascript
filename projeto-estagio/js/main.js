@@ -5,7 +5,7 @@ var redTruck = 'url(\'https://github.com/Pedrohf360/html-css-javascript/blob/mas
 var arr = [];
 
 $(document).ready(function(){
-    $.getJSON('https://raw.githubusercontent.com/Pedrohf360/html-css-javascript/master/projeto-estagio/js/equipamentos.json', function(data){
+    $.getJSON('https://raw.githubusercontent.com/Pedrohf360/html-css-javascript/master/projeto-estagio/json/equipamentos.json', function(data){
     
         var truck = '';
 
@@ -22,7 +22,7 @@ $(document).ready(function(){
                         '<h4 class="mdl-card__title-text">Gasolina:&nbsp' + fuelValue + '</h4>' +
                         '<div id="progressbar"> <div></div></div>' +
                         '<div class="mdl-card__actions mdl-card--border">' +
-                          '<button class="mdl-button mdl-js-button mdl-button--primary"><a href="./detalhes.html" target=""><strong>VER DETALHES</strong></a></button>' +
+                          '<button class="mdl-button mdl-js-button mdl-button--primary" id="' + key + '">' + '<a href="./detalhes.html" target=""><strong>VER DETALHES</strong></a></button>' +
                         '</div>' +
                       '</div>' +
                     '</div>';
