@@ -10,10 +10,12 @@ $(document).ready(function(){
         var truck = '';
 
         $.each(data, function(key, value){
-            var fuelValue = '<strong>' + value.Value.toString().substring(0, 2) + '%' + '</strong>';
+            var slicedValue = value.Value.toString().substring(0, 2);
+            var fuelValue = '<strong>' + slicedValue + '%' + '</strong>';
 
             truck += '<div class="mdl-cell">' +
                       '<div class="mdl-card mdl-shadow--2dp demonstracao-card">' +
+                        '<h4 class="mdl-card__title-text alignCenter">' + 'ID:&nbsp' + value.ID + '</h4>' +
                         '<div class="mdl-card__title">' +
                           '<h2 class="mdl-card__title-text">' + value.Name + '</h2>' +
                         '</div>' +
@@ -24,9 +26,8 @@ $(document).ready(function(){
                         '</div>' +
                       '</div>' +
                     '</div>';
-          //list.style.background = 'url(C:/Users/Home/Documents/GitHub/javascript_learning/projeto-estagio/assets/truck_red.png) bottom right 15% no-repeat #46B6AC';
 
-          arr[key] = value.Value;
+          arr[key] = slicedValue;
 
         });
 
@@ -36,18 +37,26 @@ $(document).ready(function(){
 
         for (var i = 0; i < myElements.length; i++) {
             
+            var progressBar = document.querySelectorAll('#progressbar>div');
+
             if (arr[i] <= 30)
             {
-                myElements[i].style.background = 'url(\'C:/Users/Home/Documents/GitHub/javascript_learning/projeto-estagio/assets/truck_red.png\') bottom right 15% no-repeat #46B6AC';
+                myElements[i].style.background = redTruck;
+                progressBar[i].style.width = arr[i] + '%'; 
+                progressBar[i].style.backgroundColor = 'red'; 
             } 
             else if (arr[i] > 30 && arr[i] <= 60)
             {
                 myElements[i].style.background = yellowTruck;
+                progressBar[i].style.width = arr[i] + '%';
+                progressBar[i].style.backgroundColor = 'yellow'; 
             } 
             else 
             {
                 myElements[i].style.background = greenTruck;
+                progressBar[i].style.width = arr[i] + '%';
+                progressBar[i].style.backgroundColor = 'lightgreen'; 
             }
-          } 
+          }
     });
 });    
