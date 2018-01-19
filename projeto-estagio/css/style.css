@@ -1,12 +1,8 @@
-.mdl-cell{
-  height: 50px;
-}
-
 body{
 	background-color: lightgray;
 }
-
 main{
+	margin-top: 40px;
 	text-align: center;
 }
 
@@ -25,7 +21,6 @@ a{
 }
 
 .mdl-cell{
-	padding: 35px 10px 0 60px;
 	height: 350px;
 }
 
@@ -39,12 +34,21 @@ a{
 
 h4.mdl-card__title-text{
 	font-size: 18px;
-	margin: 8px 160px 0 0px;
+	margin: 8px 130px 0 0px;
 	text-transform: uppercase;
+}
+
+h3.mdl-card__title-text{
+	font-size: 20px;
+	margin: 2px 145px 2px 0px;
 }
 
 span{
 	padding: 0px 15px;
+}
+
+#truck_cards{
+	margin-left: 80px;
 }
 
 .progressbar {
@@ -61,4 +65,8 @@ span{
    width: 100%; /* Adjust with JavaScript */
    height: 20px;
    border-radius: 10px;
+}
+
+.spacer{
+	height: 350px;
 }

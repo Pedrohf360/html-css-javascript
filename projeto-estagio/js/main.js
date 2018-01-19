@@ -10,28 +10,29 @@ $(document).ready(function(){
         var truck = '';
 
         $.each(data, function(key, value){
-            var slicedValue = value.Value.toString().substring(0, 2);
-            var slicedValue = value.Value.toString().substring(0, 2);
+            var slicedValue = value.Value.toString().substring(0, 2);   
             var fuelValue = '<strong>' + slicedValue + '%' + '</strong>';
 
             truck += '<div class="mdl-cell">' +
                       '<div class="mdl-card mdl-shadow--3dp demonstracao-card">' +
-                        '<h4 class="mdl-card__title-text alignCenter">' + 'ID:&nbsp' + value.ID + '</h4>' +
+                        '<h3 class="mdl-card__title-text alignCenter">' + 'ID:&nbsp' + value.ID + '</h4>' +
                         '<div class="mdl-card__title">' +
                           '<h2 class="mdl-card__title-text">' + value.Name + '</h2>' +
                         '</div>' +
-                        '<h4 class="mdl-card__title-text">Gasolina:&nbsp' + fuelValue + '</h4>' +
+                        '<h4 class="mdl-card__title-text">Combustível:&nbsp' + fuelValue + '</h4>' +
                         '<div id="progressbar' + key + '" class="progressbar"><div></div></div>' +
-                        '<div class="mdl-tooltip" data-mdl-for="progressbar' + key + '">' + value.Value.toFixed(2) + '%' + '</div>' +
-                        '<div class="mdl-card__actions mdl-card--border">' +
-                          '<button class="mdl-button mdl-js-button mdl-button--primary" onClick="reply_click(this.id)" id="' + ++key + '">' + '<a href="./detalhes.html" target=""><strong>VER DETALHES</strong></a></button>' +
-                        '</div>' +
+                        '<div class="mdl-card__actions mdl-card--border">' +                    //, + fuelValue + ',' + value.Name + ',' + value.ID +'
+                          '<button class="mdl-button mdl-js-button mdl-button--primary" value="' + value.ID + ';' + value.Name + ';' + slicedValue + '" onClick="reply_click(this.value)" id="' + key + '">' + '<a href="../projeto-estagio/detalhes.html"><strong>VER DETALHES</strong></a></button>' +
+                        '</div>' +                                                      
                       '</div>' +
-                    '</div>';
+                    '</div>' +
+                    '<div class="mdl-tooltip" data-mdl-for="progressbar' + key + '">' + value.Value.toFixed(2) + '%' + '</div>';
 
           arr[key] = slicedValue;
 
         });
+
+        truck += '<div class="spacer"></div>'
 
         $('#truck_cards').append(truck);
 
@@ -63,7 +64,40 @@ $(document).ready(function(){
     });
 });    
 
-function reply_click(clicked_id)
+var choosedCard
+var id;
+var name;
+var fuel;
+
+function reply_click(choosedInfo)
 {
-    alert(clicked_id);
+    var info = choosedInfo.split(';');
+
+    id = info[0];
+    name = info[1];
+    fuel = info[2];
+
+    setTimeout(write_html(), 3000);
+}
+
+function write_html()
+{
+
+    $(document).ready(function(){
+    choosedCard = '<div class="mdl-cell">' +
+                      '<div class="mdl-card mdl-shadow--3dp demonstracao-card">' +
+                        '<h3 class="mdl-card__title-text alignCenter">' + 'ID:&nbsp' + id + '</h4>' +
+                        '<div class="mdl-card__title">' +
+                          '<h2 class="mdl-card__title-text">' + name + '</h2>' +
+                        '</div>' +
+                        '<h4 class="mdl-card__title-text">Combustível:&nbsp' + fuel + '</h4>' +
+                        '<div id="progressbar" class="progressbar"><div></div></div>' +                                                     
+                      '</div>' +
+                    '</div>' +
+                    '<div class="mdl-tooltip" data-mdl-for="progressbar">' + fuel + '%' + '</div>';
+
+        setTimeout(alert('ae'), 2000);
+
+    $('#truck_one_card').append(choosedCard);
+    });
 }
