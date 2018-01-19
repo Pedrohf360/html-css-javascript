@@ -10,6 +10,10 @@ main{
 	text-align: center;
 }
 
+main>h1{
+	font-size: 40px;
+}
+
 @media screen and (max-width: 400px) {
 	.esconde-celular{
 		display: none;
@@ -43,7 +47,7 @@ span{
 	padding: 0px 15px;
 }
 
-#progressbar {
+.progressbar {
   background-color: black;
   border-radius: 13px; /* (height of inner div) / 2 + padding */
   padding: 3px;
@@ -52,7 +56,7 @@ span{
   margin: 5px 0 20px 20px;
 }
 
-#progressbar > div {
+.progressbar > div {
    background-color: lightgreen;
    width: 100%; /* Adjust with JavaScript */
    height: 20px;

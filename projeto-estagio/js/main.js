@@ -11,6 +11,7 @@ $(document).ready(function(){
 
         $.each(data, function(key, value){
             var slicedValue = value.Value.toString().substring(0, 2);
+            var slicedValue = value.Value.toString().substring(0, 2);
             var fuelValue = '<strong>' + slicedValue + '%' + '</strong>';
 
             truck += '<div class="mdl-cell">' +
@@ -20,9 +21,10 @@ $(document).ready(function(){
                           '<h2 class="mdl-card__title-text">' + value.Name + '</h2>' +
                         '</div>' +
                         '<h4 class="mdl-card__title-text">Gasolina:&nbsp' + fuelValue + '</h4>' +
-                        '<div id="progressbar"> <div></div></div>' +
+                        '<div id="progressbar' + key + '" class="progressbar"><div></div></div>' +
+                        '<div class="mdl-tooltip" data-mdl-for="progressbar' + key + '">' + value.Value.toFixed(2) + '%' + '</div>' +
                         '<div class="mdl-card__actions mdl-card--border">' +
-                          '<button class="mdl-button mdl-js-button mdl-button--primary" id="' + key + '">' + '<a href="./detalhes.html" target=""><strong>VER DETALHES</strong></a></button>' +
+                          '<button class="mdl-button mdl-js-button mdl-button--primary" onClick="reply_click(this.id)" id="' + ++key + '">' + '<a href="./detalhes.html" target=""><strong>VER DETALHES</strong></a></button>' +
                         '</div>' +
                       '</div>' +
                     '</div>';
@@ -37,7 +39,7 @@ $(document).ready(function(){
 
         for (var i = 0; i < myElements.length; i++) {
             
-            var progressBar = document.querySelectorAll('#progressbar>div');
+            var progressBar = document.querySelectorAll('.progressbar>div');
 
             if (arr[i] <= 30)
             {
@@ -60,3 +62,8 @@ $(document).ready(function(){
           }
     });
 });    
+
+function reply_click(clicked_id)
+{
+    alert(clicked_id);
+}
