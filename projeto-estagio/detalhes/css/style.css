@@ -1,0 +1,72 @@
+body{
+	background-color: lightgray;
+}
+main{
+	margin-top: 40px;
+	text-align: center;
+}
+
+main>h1{
+	font-size: 40px;
+}
+
+@media screen and (max-width: 400px) {
+	.esconde-celular{
+		display: none;
+}
+}
+
+a{
+	text-decoration: none;
+}
+
+.mdl-cell{
+	height: 350px;
+}
+
+.mdl-card__title{
+	color: black;
+	text-transform: uppercase;
+	height: 176px;
+
+	/*background:  url('../assets/truck_green.png') bottom right 15% no-repeat #46B6AC; => é definido no main.js*/ 
+}
+
+h4.mdl-card__title-text{
+	font-size: 18px;
+	margin: 8px 130px 0 0px;
+	text-transform: uppercase;
+}
+
+h3.mdl-card__title-text{
+	font-size: 20px;
+	margin: 2px 145px 2px 0px;
+}
+
+span{
+	padding: 0px 15px;
+}
+
+#truck_one_card{
+	margin-left: 50px;
+}
+
+.progressbar {
+  background-color: black;
+  border-radius: 13px; /* (height of inner div) / 2 + padding */
+  padding: 3px;
+  width: 270px;
+  align-content: center;
+  margin: 5px 0 20px 20px;
+}
+
+.progressbar > div {
+   background-color: red;
+   width: 20%; /* Adjust with JavaScript */
+   height: 20px;
+   border-radius: 10px;
+}
+
+.spacer{
+	height: 350px;
+}

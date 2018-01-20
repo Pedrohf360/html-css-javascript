@@ -22,7 +22,7 @@ $(document).ready(function(){
                         '<h4 class="mdl-card__title-text">Combustível:&nbsp' + fuelValue + '</h4>' +
                         '<div id="progressbar' + key + '" class="progressbar"><div></div></div>' +
                         '<div class="mdl-card__actions mdl-card--border">' +                    //, + fuelValue + ',' + value.Name + ',' + value.ID +'
-                          '<button class="mdl-button mdl-js-button mdl-button--primary" value="' + value.ID + ';' + value.Name + ';' + slicedValue + '" onClick="reply_click(this.value)" id="' + key + '">' + '<a href="../projeto-estagio/detalhes.html"><strong>VER DETALHES</strong></a></button>' +
+                          '<button class="mdl-button mdl-js-button mdl-button--primary" value="' + value.ID + ';' + value.Name + ';' + slicedValue + '" onClick="reply_click(this.value)" id="' + key + '">' + '<strong>' + 'VER DETALHES' + '</strong>' +'</button>' +
                         '</div>' +                                                      
                       '</div>' +
                     '</div>' +
@@ -64,40 +64,13 @@ $(document).ready(function(){
     });
 });    
 
-var choosedCard
-var id;
-var name;
-var fuel;
-
 function reply_click(choosedInfo)
 {
     var info = choosedInfo.split(';');
 
-    id = info[0];
-    name = info[1];
-    fuel = info[2];
+    localStorage.setItem('id', info[0]);
+    localStorage.setItem('name', info[1]);
+    localStorage.setItem('fuel', info[2]);
 
-    setTimeout(write_html(), 3000);
-}
-
-function write_html()
-{
-
-    $(document).ready(function(){
-    choosedCard = '<div class="mdl-cell">' +
-                      '<div class="mdl-card mdl-shadow--3dp demonstracao-card">' +
-                        '<h3 class="mdl-card__title-text alignCenter">' + 'ID:&nbsp' + id + '</h4>' +
-                        '<div class="mdl-card__title">' +
-                          '<h2 class="mdl-card__title-text">' + name + '</h2>' +
-                        '</div>' +
-                        '<h4 class="mdl-card__title-text">Combustível:&nbsp' + fuel + '</h4>' +
-                        '<div id="progressbar" class="progressbar"><div></div></div>' +                                                     
-                      '</div>' +
-                    '</div>' +
-                    '<div class="mdl-tooltip" data-mdl-for="progressbar">' + fuel + '%' + '</div>';
-
-        setTimeout(alert('ae'), 2000);
-
-    $('#truck_one_card').append(choosedCard);
-    });
+    window.location = 'C:/Users/Home/Documents/GitHub/javascript_learning/projeto-estagio/detalhes/detalhes.html';
 }
