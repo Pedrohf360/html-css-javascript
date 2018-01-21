@@ -1,6 +1,6 @@
-    var greenTruck = 'url(https://github.com/Pedrohf360/html-css-javascript/blob/master/projeto-estagio/assets/truck_green.png?raw=true) bottom right 15% no-repeat #46B6AC';
-    var yellowTruck = 'url(\'https://github.com/Pedrohf360/html-css-javascript/blob/master/projeto-estagio/assets/truck_yellow.png?raw=true\') bottom right 15% no-repeat #46B6AC';
-    var redTruck = 'url(\'https://github.com/Pedrohf360/html-css-javascript/blob/master/projeto-estagio/assets/truck_red.png?raw=true\') bottom right 15% no-repeat #46B6AC';
+    var greenTruck = 'url(\'../../projeto-estagio/assets/truck_green.png\') bottom right 15% no-repeat #46B6AC';
+    var yellowTruck = 'url(\'../../projeto-estagio/assets/truck_yellow.png\') bottom right 15% no-repeat #46B6AC';
+    var redTruck = 'url(\'../../projeto-estagio/assets/truck_red.png\') bottom right 15% no-repeat #46B6AC';
 
 
     var id = localStorage.getItem('id');
