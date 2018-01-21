@@ -74,7 +74,7 @@
         data: {
           labels: ["00:00", "02:00", "04:00", "6:00", "8:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"],
           datasets: [{
-            label: 'VOLUME GASOLINA',
+            label: 'VOLUME COMBUSTÍVEL',
             data: [fuelValues[0], fuelValues[1], fuelValues[2], fuelValues[2], fuelValues[3], fuelValues[4], fuelValues[5],
                     fuelValues[6], fuelValues[7], fuelValues[8], fuelValues[9], fuelValues[10], fuelValues[11]],
             borderWidth: 6,
