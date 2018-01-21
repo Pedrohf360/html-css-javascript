@@ -20,8 +20,8 @@ a{
 	text-decoration: none;
 }
 
-.mdl-cell{
-	height: 350px;
+.mdl-cell > .mdl-card{
+	margin: 90px 0 0 50px;
 }
 
 .mdl-card__title{
@@ -61,12 +61,17 @@ span{
 }
 
 .progressbar > div {
-   background-color: red;
-   width: 20%; /* Adjust with JavaScript */
+   background-color: lightgreen;
+   width: 100%; /* Adjust with JavaScript */
    height: 20px;
    border-radius: 10px;
 }
 
 .spacer{
 	height: 350px;
+}
+
+canvas{
+	width:  900px !important;
+	height: 450px !important;
 }
