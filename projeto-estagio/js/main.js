@@ -72,5 +72,5 @@ function reply_click(choosedInfo)
     localStorage.setItem('name', info[1]);
     localStorage.setItem('fuel', info[2]);
 
-    window.location = 'C:/Users/Home/Documents/GitHub/javascript_learning/projeto-estagio/detalhes/detalhes.html';
+    window.location = '../projeto-estagio/detalhes/detalhes.html';
 }

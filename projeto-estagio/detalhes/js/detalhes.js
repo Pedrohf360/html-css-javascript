@@ -54,7 +54,7 @@
 
       setTruckInfo(data);
 
-      createChart();
+      setTimeout(createChart(), 1000);
     });
 
     function setTruckInfo(data){
